@@ -11,7 +11,7 @@ class FileRepository(ABC):
     @abstractmethod
     def save_file(self, file_obj: File):
         """
-        Implement this method to save a file.
+        Save a file.
         :param file_obj: File that will be saved.
         :return: Void
         """
@@ -20,7 +20,7 @@ class FileRepository(ABC):
     @abstractmethod
     def get_file(self, file_name: str) -> File:
         """
-        Implement this method to get a File by name.
+        Get a file.
         :param file_name: Name of the file.
         :return: File object.
         """
