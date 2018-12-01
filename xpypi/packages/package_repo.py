@@ -19,16 +19,7 @@ class PackageRepository(ABC):
         pass
 
     @abstractmethod
-    def get_package(self, name: str) -> Package:
-        """
-        Get the most up-to-date version of a package.
-        :param name: Name of the package to get.
-        :return: Package.
-        """
-        pass
-
-    @abstractmethod
-    def get_versioned_package(self, name: str, version: str) -> Package:
+    def get_package(self, name: str, version: str) -> Package:
         """
         Get a specific version of a package.
         :param name: Name of the package to get.
