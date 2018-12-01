@@ -14,3 +14,9 @@ class File:
     @property
     def contents(self) -> bytes:
         return self._contents
+
+    def __hash__(self):
+        return hash((self._name, self._contents))
+
+    def __eq__(self, other):
+        return self.__hash__() == other.__hash__()

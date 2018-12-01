@@ -1,3 +1,5 @@
+from typing import Set
+
 from xpypi.files.file import File
 
 
@@ -19,6 +21,10 @@ class Package:
     @property
     def version(self) -> str:
         return self._version
+
+    @property
+    def files(self) -> Set[File]:
+        return self._files
 
     def insert_file(self, new_file: File):
         self._files.add(new_file)
